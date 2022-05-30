@@ -28,7 +28,9 @@ a {
 .navbar {
   background-color: var(--primary-color);
   padding: 1rem 4rem;
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
   overflow: hidden;
   width: 100%;
   display: -webkit-box;
@@ -47,7 +49,7 @@ a {
 }
 
 .navbar-image_wrapper .navbar-logo {
-  width: 100%;
+  width: 75%;
 }
 
 .navbar-items-wrapper {
@@ -82,8 +84,10 @@ a {
   height: 0.125rem;
   width: 2rem;
   background-color: white;
-  top: 1.75rem;
+  top: 1.6rem;
   right: 2rem;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .navbar-hamburger::before {
@@ -92,7 +96,7 @@ a {
   height: 0.125rem;
   width: 2rem;
   background-color: white;
-  top: -0.5rem;
+  top: -0.33rem;
 }
 
 .navbar-hamburger::after {
@@ -101,12 +105,12 @@ a {
   height: 0.125rem;
   width: 2rem;
   background-color: white;
-  top: 0.5rem;
+  top: 0.33rem;
 }
 
 @media screen and (max-width: 450px) {
   .navbar {
-    padding: 1rem 2rem;
+    padding: 1rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -116,7 +120,14 @@ a {
             align-items: flex-start;
   }
   .navbar-image_wrapper {
-    width: 50%;
+    width: 66%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .navbar-hamburger {
     display: initial;
@@ -127,8 +138,9 @@ a {
     height: 0vh;
     opacity: 0;
   }
-  .navbar-items-wrapper.open {
-    margin: -1rem -2rem;
+  .navbar.open .navbar-items-wrapper {
+    margin: -1rem;
+    margin-top: 1rem;
     padding: 2rem;
     background-color: #272727;
     text-align: center;
@@ -137,7 +149,7 @@ a {
     width: 100vw;
     height: 60vh;
   }
-  .navbar-items-wrapper.open .navbar-items-list {
+  .navbar.open .navbar-items-wrapper .navbar-items-list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -146,6 +158,17 @@ a {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+  .navbar.open .navbar-hamburger {
+    -webkit-transform: rotate(45deg) scale(0.66);
+            transform: rotate(45deg) scale(0.66);
+  }
+  .navbar.open .navbar-hamburger::before {
+    -webkit-transform: rotate(90deg) translate(0.25rem, -0.1rem);
+            transform: rotate(90deg) translate(0.25rem, -0.1rem);
+  }
+  .navbar.open .navbar-hamburger::after {
+    opacity: 0;
   }
 }
 
