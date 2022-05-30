@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./app/assets/css/main.css">
+    </head>
+
+    <body style="background-color: rgba(20, 20, 20, 1);">
+        <header>
+            <nav class="navbar">
+                <div class="navbar-image_wrapper">
+                    <img class="navbar-logo" src="./app/assets/img/logo_para_fundo_escuro.png">
+                </div>
+                <div class="navbar-items-wrapper">
+                    <ul class="navbar-items-list">
+                        <a href="">
+                            <li class="navbar-items-list-item item-active">Sobre nós</li>
+                        </a>
+                        <a href="">
+                            <li class="navbar-items-list-item">Projetos</li>
+                        </a>
+                        <a href="">
+                            <li class="navbar-items-list-item">Serviços</li>
+                        </a>
+                        <a href="">
+                            <li class="navbar-items-list-item">Contato</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <span class="navbar-hamburger"></span>
+
+            </nav>
+        </header>
+        <main >
+            <section class="landing">
+                <div class="landing-title-wrapper">
+                    <h1 class="landing-title">teste</h1>
+                </div>
+                <div class="landing-info-wrapper">
+                    <p class="landing-info-text">Nós somos a empresa júnior de tecnologia da PUCPR.<br>Oferecemos soluções em tecnologia sob medida a preços acessíveis.</p>
+                    <button class="landing-info-button">Entre em contato</button>
+                </div>
+            </section>
+        </main>
+    <script>
+        var menuOpen = false
+        document.querySelector(".navbar-hamburger").addEventListener("click", ()=>{
+            console.log("oi");
+            menuOpen ? document.querySelector(".navbar-items-wrapper").classList.remove("open") : document.querySelector(".navbar-items-wrapper").classList.add("open");
+            menuOpen = !menuOpen
+        })
+    </script>
+    </body>
+</html>
