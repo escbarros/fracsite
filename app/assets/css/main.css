@@ -115,8 +115,7 @@ a {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .navbar-logo {
-    height: 50%;
+  .navbar-image_wrapper {
     width: 50%;
   }
   .navbar-hamburger {
