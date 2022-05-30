@@ -96,7 +96,7 @@
         }
     }
 }
-@media screen and (max-width: 810px){
+@media screen and (min-width:420px)and (max-width: 810px){
     .navbar-image_wrapper{
         width: 33%;
     }
