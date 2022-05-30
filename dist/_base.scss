@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+$font-size-navbar: 0.95rem;
+$font-size-hero-title: 4rem;
+$font-size-hero-desc: 2.5rem;
+$font-size-hero-button: 2.5rem;
+
+$font-weight-primary: 700;
+$font-weight-secundary: 500;
+
+html[data-theme="dark"]{
+    --primary-color: rgba(20, 20, 20, 1);
+    --secundary-color: white;
+    --navbar-logo: url('../app/assets/img/logo_para_fundo_escuro.png')
+}
+html[data-theme="light"]{
+    --primary-color: white;
+    --secundary-color: #262626;
+    --navbar-logo: '../app/assets/img/logo_para_fundo_claro.png'
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
