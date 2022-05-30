@@ -1,4 +1,70 @@
 .landing{
-    height: 200vh;
-    background-color: red;
+    height: 60vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    overflow: hidden;
+    &-title-wrapper{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        margin-left: 4rem;
+        .landing-title{
+            overflow: hidden;
+            height: 4rem;
+            span{
+
+                color: var(--secundary-color);
+                font-size: $font-size-hero-title;
+                font-weight: $font-weight-primary;
+                display: block;
+                height: 100%;
+                animation: word_rotate 25s ease-in-out infinite -5s; 
+                animation-direction: normal;
+            }
+        }
+    }
+}
+// @keyframes word_rotate{
+//     10%{
+//         transform: translateY(-112%);
+//     }    25%{
+//         transform: translateY(-100%);
+//     }    35%{
+//         transform: translateY(-212%);
+//     }    50%{
+//         transform: translateY(-200%);
+//     }    60%{
+//         transform: translateY(-312%);
+//     }    75%{
+//         transform: translateY(-300%);
+//     }    85%{
+//         transform: translateY(-412%);
+//     }
+//     100%{
+//         transform: translateY(12%);
+//     }
+// }
+@keyframes word_rotate{
+    0%{
+        transform: translateY(100%);
+    }
+    5%{
+        transform: translateY(0%);
+    }
+    40%{
+        transform: translateY(-100%);
+    }
+    58%{
+        transform: translateY(-200%);
+    }
+    79%{
+        transform: translateY(-300%);
+    }
+    99%{
+        transform: translateY(-400%);
+    }
+    100%{
+        transform: translateY(-500%);
+    }
 }

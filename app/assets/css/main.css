@@ -69,7 +69,7 @@ a {
 
 .navbar-items-wrapper .navbar-items-list-item {
   color: var(--secundary-color);
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-left: 2rem;
   font-weight: 500;
 }
@@ -182,7 +182,102 @@ a {
 }
 
 .landing {
-  height: 200vh;
-  background-color: red;
+  height: 60vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  overflow: hidden;
+}
+
+.landing-title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 4rem;
+}
+
+.landing-title-wrapper .landing-title {
+  overflow: hidden;
+  height: 4rem;
+}
+
+.landing-title-wrapper .landing-title span {
+  color: var(--secundary-color);
+  font-size: 4rem;
+  font-weight: 700;
+  display: block;
+  height: 100%;
+  -webkit-animation: word_rotate 25s ease-in-out infinite -5s;
+          animation: word_rotate 25s ease-in-out infinite -5s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+@-webkit-keyframes word_rotate {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  5% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  40% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  58% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  79% {
+    -webkit-transform: translateY(-300%);
+            transform: translateY(-300%);
+  }
+  99% {
+    -webkit-transform: translateY(-400%);
+            transform: translateY(-400%);
+  }
+  100% {
+    -webkit-transform: translateY(-500%);
+            transform: translateY(-500%);
+  }
+}
+
+@keyframes word_rotate {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  5% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  40% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  58% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  79% {
+    -webkit-transform: translateY(-300%);
+            transform: translateY(-300%);
+  }
+  99% {
+    -webkit-transform: translateY(-400%);
+            transform: translateY(-400%);
+  }
+  100% {
+    -webkit-transform: translateY(-500%);
+            transform: translateY(-500%);
+  }
 }
 /*# sourceMappingURL=main.css.map */
