@@ -28,8 +28,9 @@ a {
 .navbar {
   background-color: var(--primary-color);
   padding: 1rem 4rem;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +40,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
 }
 
 .navbar-image_wrapper {
