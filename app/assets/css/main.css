@@ -25,10 +25,94 @@ a {
   color: inherit;
 }
 
+.landing {
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  background-color: var(--primary-color);
+}
+
+.landing-title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 4rem;
+}
+
+.landing-title-wrapper .landing-title {
+  color: var(--secundary-color);
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.landing-info-wrapper {
+  position: relative;
+  padding-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.landing-info-wrapper .landing-info-text {
+  font-size: 2.5rem;
+  font-weight: 500;
+  width: 75%;
+  color: var(--secundary-color);
+}
+
+.landing-info-wrapper .landing-info-text_primary, .landing-info-wrapper .landing-info-text_secundary {
+  margin-bottom: 2rem;
+}
+
+.landing-info-wrapper .landing-info-button-wrapper {
+  width: 75%;
+}
+
+.landing-info-wrapper .landing-info-button {
+  width: 75%;
+  background-color: var(--secundary-color);
+  cursor: pointer;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+}
+
+.landing-info-wrapper::before {
+  content: " ";
+  height: 55%;
+  width: 0.25rem;
+  background-color: var(--secundary-color);
+  position: absolute;
+  right: 90%;
+}
+
 .navbar {
   background-color: var(--primary-color);
-  padding: 1rem 4rem;
+  padding: 3rem 4rem;
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -178,106 +262,6 @@ a {
   }
   .navbar-items-wrapper {
     width: 66%;
-  }
-}
-
-.landing {
-  height: 60vh;
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  overflow: hidden;
-}
-
-.landing-title-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 4rem;
-}
-
-.landing-title-wrapper .landing-title {
-  overflow: hidden;
-  height: 4rem;
-}
-
-.landing-title-wrapper .landing-title span {
-  color: var(--secundary-color);
-  font-size: 4rem;
-  font-weight: 700;
-  display: block;
-  height: 100%;
-  -webkit-animation: word_rotate 25s ease-in-out infinite -5s;
-          animation: word_rotate 25s ease-in-out infinite -5s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-}
-
-@-webkit-keyframes word_rotate {
-  0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-  5% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  40% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  58% {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
-  }
-  79% {
-    -webkit-transform: translateY(-300%);
-            transform: translateY(-300%);
-  }
-  99% {
-    -webkit-transform: translateY(-400%);
-            transform: translateY(-400%);
-  }
-  100% {
-    -webkit-transform: translateY(-500%);
-            transform: translateY(-500%);
-  }
-}
-
-@keyframes word_rotate {
-  0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-  5% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  40% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  58% {
-    -webkit-transform: translateY(-200%);
-            transform: translateY(-200%);
-  }
-  79% {
-    -webkit-transform: translateY(-300%);
-            transform: translateY(-300%);
-  }
-  99% {
-    -webkit-transform: translateY(-400%);
-            transform: translateY(-400%);
-  }
-  100% {
-    -webkit-transform: translateY(-500%);
-            transform: translateY(-500%);
   }
 }
 /*# sourceMappingURL=main.css.map */

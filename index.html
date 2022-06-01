@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="dark">
+<html data-theme="light">
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -12,11 +12,11 @@
         <link rel="stylesheet" href="./app/assets/css/main.css">
     </head>
 
-    <body style="background-color: rgba(20, 20, 20, 1);">
+    <body style="background-color: red;">
         <header>
             <nav class="navbar">
                 <div class="navbar-image_wrapper">
-                    <img class="navbar-logo" src="./app/assets/img/logo_para_fundo_escuro.png">
+                    <img class="navbar-logo" src="./app/assets/img/logo_para_fundo_claro.png">
                 </div>
                 <div class="navbar-items-wrapper">
                     <ul class="navbar-items-list">
@@ -42,20 +42,33 @@
         <main>
             <section class="landing">
                 <div class="landing-title-wrapper">
-                    <div class="landing-title">
-                        <span>Olá mundo</span>
-                        <span>Hello world</span>
-                        <span>Teste</span>
-                        <span>Hallo Stumm</span>
-                        <span>مرحبا البكم</span>
-                    </div>
+                    <h1 class="landing-title"></h1>
                 </div>
                 <div class="landing-info-wrapper">
-                    <p class="landing-info-text">Nós somos a empresa júnior de tecnologia da PUCPR.<br>Oferecemos soluções em tecnologia sob medida a preços acessíveis.</p>
-                    <button class="landing-info-button">Entre em contato</button>
+                    <div class="landing-info-text">
+                        <p class="landing-info-text_primary">Nós somos a empresa júnior de tecnologia da PUCPR.</p>
+                        <p class="landing-info-text_secundary">Oferecemos soluções em tecnologia sob medida a preços acessíveis</p>
+                    </div>
+                    <div class="landing-info-button-wrapper">
+                        <button class="landing-info-button">Entre em contato</button>
+                    </div>
                 </div>
             </section>
+            <section style="height: 100vh; background-color: purple;"></section>
         </main>
     <script src="./app/assets/js/navbar.js"></script>
+    <script src="./app/assets/js/TextScramble.js"></script>
+    <script>
+        const query = window.matchMedia('(prefers-color-scheme:dark)');
+        const imagem = document.querySelector(".navbar-logo");
+        if(query.matches){
+            document.documentElement.setAttribute("data-theme", "dark")
+            imagem.src="./app/assets/img/logo_para_fundo_escuro.png"
+        }else{
+            document.documentElement.setAttribute("data-theme", "light")
+            imagem.src="./app/assets/img/logo_para_fundo_claro.png"
+
+        }
+    </script>
     </body>
 </html>

@@ -1,70 +1,63 @@
 .landing{
-    height: 60vh;
+    height: 100vh;
     width: 100%;
+    z-index: 1;
     display: grid;
     grid-template-columns: 50% 50%;
-    overflow: hidden;
+    background-color: var(--primary-color);
     &-title-wrapper{
         display: flex;
         height: 100%;
+        // position: relative;
+        // top: -5rem;
+
         align-items: center;
         margin-left: 4rem;
         .landing-title{
-            overflow: hidden;
-            height: 4rem;
-            span{
-
-                color: var(--secundary-color);
-                font-size: $font-size-hero-title;
-                font-weight: $font-weight-primary;
-                display: block;
-                height: 100%;
-                animation: word_rotate 25s ease-in-out infinite -5s; 
-                animation-direction: normal;
-            }
+            color: var(--secundary-color);
+            font-size: $font-size-hero-title;
+            font-weight: $font-weight-primary;
         }
     }
-}
-// @keyframes word_rotate{
-//     10%{
-//         transform: translateY(-112%);
-//     }    25%{
-//         transform: translateY(-100%);
-//     }    35%{
-//         transform: translateY(-212%);
-//     }    50%{
-//         transform: translateY(-200%);
-//     }    60%{
-//         transform: translateY(-312%);
-//     }    75%{
-//         transform: translateY(-300%);
-//     }    85%{
-//         transform: translateY(-412%);
-//     }
-//     100%{
-//         transform: translateY(12%);
-//     }
-// }
-@keyframes word_rotate{
-    0%{
-        transform: translateY(100%);
+    &-info-wrapper{
+        position: relative;
+        // top: -5rem;
+        padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        .landing-info-text{
+            font-size: $font-size-hero-desc;
+            font-weight: $font-weight-secundary;
+            width: 75%;
+            color: var(--secundary-color);
+            &_primary, &_secundary{
+                margin-bottom: 2rem;
+            }
+        }
+        .landing-info-button-wrapper{
+            width: 75%;
+        }
+        .landing-info-button{
+            width: 75%;
+            background-color: var(--secundary-color);
+            cursor: pointer;
+            align-self: flex-start;
+            color: var(--primary-color);
+            font-size: $font-size-hero-desc;
+            font-weight: $font-weight-primary;
+            padding: 1rem 2rem;
+            border-radius: 3rem;
+        }
+    &::before{
+        content: " ";
+        height: 55%;
+        width: 0.25rem;
+        background-color: var(--secundary-color);
+        position: absolute;
+        right: 90%;
     }
-    5%{
-        transform: translateY(0%);
-    }
-    40%{
-        transform: translateY(-100%);
-    }
-    58%{
-        transform: translateY(-200%);
-    }
-    79%{
-        transform: translateY(-300%);
-    }
-    99%{
-        transform: translateY(-400%);
-    }
-    100%{
-        transform: translateY(-500%);
     }
 }
+
