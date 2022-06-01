@@ -58,8 +58,8 @@ const frases = [
     'Olá mundo',
     'Hello World',
     'こんにちは世界',
-    'مرحبا بالعالم',
     'Hallo Welt',
+    'مرحبا بالعالم',
 ]
 const elemento = document.querySelector(".landing-title");
 const efeito = new TextScramble(elemento);

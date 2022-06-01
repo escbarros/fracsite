@@ -30,6 +30,9 @@
             justify-content: end;
             list-style-type: none;
             &-item{
+                &:hover{
+                    text-shadow: -3px 3px 20px var(--secundary-color);
+                }
                 color: var(--secundary-color);
                 font-size: $font-size-navbar;
                 margin-left: 2rem;

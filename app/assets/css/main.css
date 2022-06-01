@@ -158,6 +158,10 @@ a {
   font-weight: 500;
 }
 
+.navbar-items-wrapper .navbar-items-list-item:hover {
+  text-shadow: -3px 3px 20px var(--secundary-color);
+}
+
 .navbar-items-wrapper .navbar-items-list-item.item-active {
   font-weight: 700;
 }
