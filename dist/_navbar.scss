@@ -1,6 +1,6 @@
 .navbar{
     background-color: var(--primary-color);
-    padding: 3rem 4rem;
+    padding: 2rem 4rem;
     // padding: 1rem 2rem; //mobile
     position: fixed;
     z-index: 2;
@@ -43,86 +43,65 @@
             }
         }
     }
-    &-hamburger{
+    #botaoMenu{
         display: none;
+        font-size: $font-size-navbar;
+        color: var(--secundary-color);
+        cursor: pointer;
         position: absolute;
-        height: 0.125rem;
-        width: 2rem;
-        background-color: white;
-        top: 1.6rem;
-        right: 2rem;
-        transition: all 0.25s ease-in-out;
-        &::before{
-            content: " ";
-            position: absolute;
-            height: 0.125rem;
-            width: 2rem;
-            background-color: white;
-            top: -0.33rem;
-        }
-        &::after{
-            content: " ";
-            position: absolute;
-            height: 0.125rem;
-            width: 2rem;
-            background-color: white;
-            top: 0.33rem;
-        }
+        right: 1.25rem;
+        top: 1.35rem;
     }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
     .navbar{
         padding: 1rem;
 
         flex-direction: column;
         align-items: flex-start;
+        #botaoMenu{
+            display: initial;
+        }
         &-image_wrapper{
             width: 66%;
             height: 100%;
             display: flex;
             align-items: center;
         }
-
-        &-hamburger{
-            display: initial;
-            
-        }
         &-items-wrapper{
-            display: none;
             overflow: hidden;
             height: 0vh;
+            width: 100vw;
             opacity: 0;
+            margin: -1rem;
+            margin-top: 1rem;
+            padding: 2rem;
+            transition: none;
+            .navbar-items-list{
+                flex-direction: column;
+                height: 100%;
+            }
+            
         }
         &.open{
             .navbar-items-wrapper{
-                margin: -1rem;
-                margin-top: 1rem;
-                padding: 2rem;
-                background-color: #272727;
+                background-color: var(--menu-color);
+                border-bottom: 5px solid aqua;
                 text-align: center;
                 opacity: 1;
-                display: block;
                 width: 100vw;
                 height: 60vh;
+                transition: all 0.5s ease-in-out;
                 .navbar-items-list{
                     flex-direction: column;
                     height: 100%;
                     justify-content: space-evenly;
                 }
             }
-            .navbar-hamburger{
-                transform: rotate(45deg) scale(0.66);
-                &::before{
-                    transform: rotate(90deg) translate(0.25rem, -0.1rem)
-                }
-                &::after{
-                    opacity: 0;
-                }
-            }
         }
     }
 }
-@media screen and (min-width:450px)and (max-width: 810px){
+@media screen and (min-width:500px)and (max-width: 810px){
     .navbar-image_wrapper{
         width: 33%;
     }

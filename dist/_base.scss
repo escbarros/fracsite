@@ -7,21 +7,22 @@
 
 $font-size-navbar: 1rem;
 $font-size-hero-title: 4rem;
-$font-size-hero-desc: 2rem;
-$font-size-hero-button: 2.25rem;
+$font-size-hero-title_mobile: 2rem;
+$font-size-hero-desc: 2.5rem;
+$font-size-hero-desc_mobile: 0.75rem;
 
 $font-weight-primary: 700;
 $font-weight-secundary: 500;
 
 html[data-theme="dark"]{
-    --primary-color: rgba(20, 20, 20, 1);
+    --primary-color: #141414;
     --secundary-color: white;
-    --navbar-logo: url('../app/assets/img/logo_para_fundo_escuro.png')
+    --menu-color: #1d1d1d;
 }
 html[data-theme="light"]{
     --primary-color: white;
     --secundary-color: #262626;
-    --navbar-logo: '../app/assets/img/logo_para_fundo_claro.png'
+    --menu-color:rgb(228, 228, 228);
 }
 a{
     text-decoration: none;

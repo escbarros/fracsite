@@ -1,7 +1,6 @@
 .landing{
     height: 100vh;
     width: 100%;
-    z-index: 1;
     display: grid;
     grid-template-columns: 50% 50%;
     background-color: var(--primary-color);
@@ -50,14 +49,74 @@
             padding: 1rem 2rem;
             border-radius: 3rem;
         }
-    &::before{
-        content: " ";
-        height: 55%;
-        width: 0.25rem;
-        background-color: var(--secundary-color);
-        position: absolute;
-        right: 90%;
-    }
+        &::before{
+            content: " ";
+            height: 55%;
+            width: 0.25rem;
+            background-color: var(--secundary-color);
+            position: absolute;
+            right: 90%;
+        }
     }
 }
 
+@media screen and (max-width:500px) {
+    .landing{
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 60%;
+        gap: 1rem;
+        &-title-wrapper{
+            width: 100%;
+            padding: 0.5rem;
+            height: 100%;
+            align-items: flex-end;
+            margin: 0;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            // &::after{
+            //     content: " ";
+            //     background-color: var(--secundary-color);
+            //     width: 75%;
+            //     height: 0.12rem;
+            //     position: absolute;
+            // }
+            .landing-title{
+                font-size: $font-size-hero-title_mobile
+            }
+        }
+        &-info-wrapper{
+            grid-row: 2/3;
+            position: initial;
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0;
+            &::before{
+                content: " ";
+                height: 2px;
+                width: 80%;
+                right: 10%;
+                opacity: 0.25;
+                top: 60%;
+            }
+            .landing-info-text{
+                width: 100%;
+                font-size:$font-size-hero-desc_mobile;
+                display: initial;
+                text-align: center;
+                &_primary, &_secundary{
+                    margin-bottom: 1rem;
+                }
+            }
+            .landing-info-button-wrapper{
+                width: 100%;
+                .landing-info-button{
+                    width: 100%;
+                    font-size:$font-size-hero-desc_mobile;
+
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}
