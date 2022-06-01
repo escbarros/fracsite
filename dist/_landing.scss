@@ -7,12 +7,25 @@
     &-title-wrapper{
         display: flex;
         height: 100%;
+        overflow: hidden;
         // position: relative;
         // top: -5rem;
-
+        #logoSvg{
+            position: absolute;
+            height: 80%;
+            top: 15%;
+            left: -20rem;
+            z-index: 0;
+            opacity: 0.02;
+            animation: giraLogo 80s ease-in-out;
+            path{
+                fill: var(--secundary-color);
+            }
+        }
         align-items: center;
         margin-left: 4rem;
         .landing-title{
+            z-index: 1;
             color: var(--secundary-color);
             font-size: $font-size-hero-title;
             font-weight: $font-weight-primary;
@@ -74,13 +87,10 @@
             display: flex;
             text-align: center;
             justify-content: center;
-            // &::after{
-            //     content: " ";
-            //     background-color: var(--secundary-color);
-            //     width: 75%;
-            //     height: 0.12rem;
-            //     position: absolute;
-            // }
+            #logoSvg{
+                height: 50%;
+                
+            }
             .landing-title{
                 font-size: $font-size-hero-title_mobile
             }
@@ -89,15 +99,16 @@
             grid-row: 2/3;
             position: initial;
             width: 100%;
-            padding: 0.75rem;
+            padding: 2rem;
             margin: 0;
             &::before{
-                content: " ";
-                height: 2px;
-                width: 80%;
-                right: 10%;
-                opacity: 0.25;
-                top: 60%;
+                // content: " ";
+                // height: 2px;
+                // width: 80%;
+                // right: 10%;
+                // opacity: 0.25;
+                // top: 60%;
+                display: none;
             }
             .landing-info-text{
                 width: 100%;
@@ -118,5 +129,13 @@
                 }
             }
         }
+    }
+}
+@keyframes giraLogo{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
     }
 }

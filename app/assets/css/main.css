@@ -38,13 +38,30 @@ a {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
+  overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-left: 4rem;
 }
 
+.landing-title-wrapper #logoSvg {
+  position: absolute;
+  height: 80%;
+  top: 15%;
+  left: -20rem;
+  z-index: 0;
+  opacity: 0.02;
+  -webkit-animation: giraLogo 80s ease-in-out;
+          animation: giraLogo 80s ease-in-out;
+}
+
+.landing-title-wrapper #logoSvg path {
+  fill: var(--secundary-color);
+}
+
 .landing-title-wrapper .landing-title {
+  z-index: 1;
   color: var(--secundary-color);
   font-size: 4rem;
   font-weight: 700;
@@ -129,6 +146,9 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .landing-title-wrapper #logoSvg {
+    height: 50%;
+  }
   .landing-title-wrapper .landing-title {
     font-size: 2rem;
   }
@@ -138,20 +158,15 @@ a {
     grid-row: 2/3;
     position: initial;
     width: 100%;
-    padding: 0.75rem;
+    padding: 2rem;
     margin: 0;
   }
   .landing-info-wrapper::before {
-    content: " ";
-    height: 2px;
-    width: 80%;
-    right: 10%;
-    opacity: 0.25;
-    top: 60%;
+    display: none;
   }
   .landing-info-wrapper .landing-info-text {
     width: 100%;
-    font-size: 0.75rem;
+    font-size: 1.5em;
     display: initial;
     text-align: center;
   }
@@ -163,8 +178,30 @@ a {
   }
   .landing-info-wrapper .landing-info-button-wrapper .landing-info-button {
     width: 100%;
-    font-size: 0.75rem;
+    font-size: 1.5em;
     padding: 0.5rem;
+  }
+}
+
+@-webkit-keyframes giraLogo {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes giraLogo {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -264,12 +301,11 @@ a {
     overflow: hidden;
     height: 0vh;
     width: 100vw;
+    display: none;
     opacity: 0;
     margin: -1rem;
     margin-top: 1rem;
     padding: 2rem;
-    -webkit-transition: none;
-    transition: none;
   }
   .navbar-items-wrapper .navbar-items-list {
     -webkit-box-orient: vertical;
@@ -283,10 +319,10 @@ a {
     border-bottom: 5px solid aqua;
     text-align: center;
     opacity: 1;
+    display: initial;
     width: 100vw;
     height: 60vh;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    display: initial;
   }
   .navbar.open .navbar-items-wrapper .navbar-items-list {
     -webkit-box-orient: vertical;

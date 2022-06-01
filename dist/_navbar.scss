@@ -72,11 +72,11 @@
             overflow: hidden;
             height: 0vh;
             width: 100vw;
+            display: none;
             opacity: 0;
             margin: -1rem;
             margin-top: 1rem;
             padding: 2rem;
-            transition: none;
             .navbar-items-list{
                 flex-direction: column;
                 height: 100%;
@@ -89,9 +89,10 @@
                 border-bottom: 5px solid aqua;
                 text-align: center;
                 opacity: 1;
+                display: initial;
                 width: 100vw;
                 height: 60vh;
-                transition: all 0.5s ease-in-out;
+                display: initial;
                 .navbar-items-list{
                     flex-direction: column;
                     height: 100%;

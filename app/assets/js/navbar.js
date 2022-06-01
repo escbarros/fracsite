@@ -2,6 +2,9 @@
 //     navbarHeight = document.querySelector(".navbar").offsetHeight
 //     document.querySelector("main").style.marginTop = `${navbarHeight}px` 
 // }
+// var miniLogo;
+// const miniLogoDark = "../css/simbulo_para_fundo_escuro.png"
+// const miniLogoLight = "../css/simbulo_para_fundo_claro.png"
 var menuOpen = false;
 var navbarHeight = document.querySelector(".navbar").offsetHeight
 // mudaTamanhoNav()
@@ -28,3 +31,12 @@ document.querySelector('main').addEventListener("click", ()=>{
         // mudaTamanhoNav()
     } 
 })
+console.log(document.querySelector("#outro-conteudo").offsetTop);
+// window.addEventListener("scroll", ()=>{
+//     if(scrollY >= document.querySelector("#outro-conteudo").offsetTop){
+//         document.querySelector(".navbar-logo").src = "./smbolo_para_fundo_escuro.png"
+//     }
+//     else{
+//         document.querySelector(".navbar-logo").src = "../img/logo_para_fundo_escuro.png"
+//     }
+// })
