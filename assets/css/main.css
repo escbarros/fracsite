@@ -1,0 +1,157 @@
+html[data-theme="dark"] {
+  --cor-primaria: rgba(0, 0, 0, 1);
+  --cor-secundaria: rgba(250, 248, 234, 1);
+  --cor-desc-secundaria:rgba(187, 187, 187, 1);
+  --cor-simbolo: #00B5BB;
+}
+
+html[data-theme="light"] {
+  --cor-primaria: rgba(250, 248, 234, 1);
+  --cor-secundaria: rgba(0, 0, 0, 1);
+  --cor-simbolo: #009BA1;
+}
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--cor-primaria);
+  background-image: url("../img/darktopo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landing-gradient {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35vh;
+  width: 100vw;
+  background: black;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, black), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(180deg, black 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.landing .navbar {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.landing .navbar #landing-logoSvg {
+  position: absolute;
+  height: 5.5rem;
+  width: 5.5rem;
+}
+
+.landing .navbar #landing-logoSvg path {
+  fill: var(--cor-simbolo);
+}
+
+.landing_conteudo {
+  position: relative;
+  top: -3rem;
+  padding: 0 2rem;
+  height: 100%;
+  gap: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.landing_conteudo-titulo {
+  color: var(--cor-secundaria);
+  font-size: 2.15rem;
+  font-weight: 700;
+}
+
+.landing_conteudo-descricao {
+  color: var(--cor-desc-secundaria);
+  font-size: 1.06rem;
+  font-weight: 400;
+}
+
+.landing_conteudo_links {
+  margin-top: 2rem;
+}
+
+.landing_conteudo_links h2 a {
+  color: var(--cor-simbolo);
+  font-size: 1.06rem;
+  font-weight: 400;
+}
+
+.landing_conteudo_links h2 a::after {
+  content: " >";
+}
+
+.landing_conteudo_pointer {
+  height: auto;
+  position: relative;
+  color: var(--cor-desc-secundaria);
+  top: 20%;
+}
+
+.landing_conteudo_pointer-dica {
+  font-weight: 400;
+}
+
+.landing_conteudo_pointer .landing_pointer-flecha {
+  position: relative;
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+  font-weight: 700;
+  animation: flechaQuicando 1.5s ease-in-out infinite alternate-reverse;
+}
+
+@-webkit-keyframes flechaQuicando {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+}
+
+@keyframes flechaQuicando {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */
