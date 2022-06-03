@@ -8,11 +8,11 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="light"] {
-  --cor-primaria: rgba(250, 248, 234, 1);
+  --cor-primaria: white;
   --cor-secundaria: rgba(0, 0, 0, 1);
   --cor-simbolo: #009BA1;
   --imagem-fundo: url("../img/lighttopo.jpg");
-  --gradiente-fundo: linear-gradient(180deg, rgba(250, 248, 234, 1) 25%, rgba(250, 248, 234,0) 100%);
+  --gradiente-fundo: linear-gradient(180deg, white 25%, rgba(250, 248, 234,0) 100%);
 }
 
 html {
