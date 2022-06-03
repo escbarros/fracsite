@@ -1,23 +1,32 @@
 html[data-theme="dark"] {
   --cor-primaria: rgba(0, 0, 0, 1);
   --cor-secundaria: rgba(250, 248, 234, 1);
-  --cor-desc-secundaria:rgba(187, 187, 187, 1);
+  --cor-desc-secundaria:#BBBBBB;
   --cor-simbolo: #00B5BB;
+  --imagem-fundo: url("../img/darktopo.jpg");
+  --gradiente-fundo: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 100%);
 }
 
 html[data-theme="light"] {
   --cor-primaria: rgba(250, 248, 234, 1);
   --cor-secundaria: rgba(0, 0, 0, 1);
   --cor-simbolo: #009BA1;
+  --imagem-fundo: url("../img/lighttopo.jpg");
+  --gradiente-fundo: linear-gradient(180deg, rgba(250, 248, 234, 1) 25%, rgba(250, 248, 234,0) 100%);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .landing {
-  height: 100vh;
-  width: 100vw;
+  height: 87vh;
+  width: 100%;
   background-color: var(--cor-primaria);
-  background-image: url("../img/darktopo.jpg");
+  background-image: var(--imagem-fundo);
   background-position: center;
   background-repeat: no-repeat;
+  overflow-x: hidden;
   background-size: cover;
 }
 
@@ -27,10 +36,9 @@ html[data-theme="light"] {
   top: 0;
   left: 0;
   height: 35vh;
-  width: 100vw;
+  width: 100%;
   background: black;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, black), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(180deg, black 50%, rgba(0, 0, 0, 0) 100%);
+  background: var(--gradiente-fundo);
 }
 
 .landing .navbar {
@@ -58,10 +66,9 @@ html[data-theme="light"] {
 }
 
 .landing_conteudo {
-  position: relative;
-  top: -3rem;
-  padding: 0 2rem;
   height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
   gap: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,6 +153,64 @@ html[data-theme="light"] {
   }
 }
 
+.sobreOMej {
+  width: 100%;
+  background-color: var(--cor-primaria);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2rem 2rem;
+}
+
+.sobreOMej_chamada {
+  border-right: 3px solid var(--cor-secundaria);
+  padding: 1rem;
+  margin-bottom: 4rem;
+}
+
+.sobreOMej_chamada-titulo {
+  color: var(--cor-secundaria);
+  font-weight: 700;
+  font-size: 2.15rem;
+  margin-bottom: 1rem;
+}
+
+.sobreOMej_chamada-descricao {
+  width: 90%;
+  color: var(--cor-desc-secundaria);
+  font-weight: 400;
+  font-size: 1.06rem;
+}
+
+.sobreOMej_perguntas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  text-align: center;
+  gap: 4rem;
+}
+
+.sobreOMej_perguntas_container .sobreOMej_perguntas-titulo {
+  color: var(--cor-secundaria);
+  font-weight: 700;
+  font-size: 1.06rem;
+  margin-bottom: 1rem;
+}
+
+.sobreOMej_perguntas_container .sobreOMej_perguntas-resposta {
+  color: var(--cor-desc-secundaria);
+  font-weight: 400;
+  font-size: 1.06rem;
+}
+
+.sobreOMej_perguntas_container .sobreOMej_perguntas-resposta a {
+  color: var(--cor-simbolo);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -153,5 +218,26 @@ html[data-theme="light"] {
           box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
+}
+
+#botao-topo {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  color: var(--cor-primaria);
+  -webkit-box-shadow: var(--cor-secundaria) 0px 2px 4px 0px, var(--cor-secundaria) 0px 2px 16px 0px;
+          box-shadow: var(--cor-secundaria) 0px 2px 4px 0px, var(--cor-secundaria) 0px 2px 16px 0px;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--cor-simbolo);
 }
 /*# sourceMappingURL=main.css.map */
