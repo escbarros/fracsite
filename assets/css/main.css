@@ -2,21 +2,17 @@ html[data-theme="dark"] {
   --cor-primaria: rgba(0, 0, 0, 1);
   --cor-secundaria: rgba(250, 248, 234, 1);
   --cor-desc-secundaria:rgba(255, 255, 255, 0.425);
-  --cor-desc-secundaria:#BBBBBB;
-
   --cor-simbolo: #00B5BB;
   --imagem-fundo: url("../img/darktopo.jpg");
   --gradiente-fundo: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 100%);
 }
 
 html[data-theme="light"] {
-  --cor-primaria: white;
+  --cor-primaria: rgba(250, 248, 234, 1);
   --cor-secundaria: rgba(0, 0, 0, 1);
   --cor-simbolo: #009BA1;
   --imagem-fundo: url("../img/lighttopo.jpg");
-
-  --gradiente-fundo: linear-gradient(180deg, white 25%, rgba(250, 248, 234,0) 100%);
-
+  --gradiente-fundo: linear-gradient(180deg, rgba(250, 248, 234, 1) 25%, rgba(250, 248, 234,0) 100%);
 }
 
 html {
@@ -284,6 +280,51 @@ html {
   font-size: 1.06rem;
 }
 
+footer {
+  height: auto;
+  width: 100%;
+  background-color: var(--cor-primaria);
+  padding: 0rem 2rem;
+  padding-top: 20%;
+}
+
+footer .nossas-redes-titulo {
+  color: var(--cor-secundaria);
+  margin-bottom: 1rem;
+}
+
+footer .nossas-redes_container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+footer .nossas-redes_container a i {
+  color: white;
+  font-size: 2rem;
+  margin: 1.5rem;
+}
+
+footer .mapa {
+  height: 100%;
+  width: 100%;
+}
+
+footer .copyright {
+  margin-top: 0.5rem;
+  color: var(--cor-desc-secundaria);
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -313,3 +354,4 @@ html {
   right: 2rem;
   background-color: var(--cor-simbolo);
 }
+/*# sourceMappingURL=main.css.map */
