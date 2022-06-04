@@ -1,11 +1,9 @@
 html[data-theme="dark"] {
   --cor-primaria: rgba(0, 0, 0, 1);
   --cor-secundaria: rgba(250, 248, 234, 1);
-<<<<<<< HEAD
   --cor-desc-secundaria:rgba(255, 255, 255, 0.425);
-=======
   --cor-desc-secundaria:#BBBBBB;
->>>>>>> f5a7e8dda496030487b13282a8b76908184af082
+
   --cor-simbolo: #00B5BB;
   --imagem-fundo: url("../img/darktopo.jpg");
   --gradiente-fundo: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 100%);
@@ -16,11 +14,9 @@ html[data-theme="light"] {
   --cor-secundaria: rgba(0, 0, 0, 1);
   --cor-simbolo: #009BA1;
   --imagem-fundo: url("../img/lighttopo.jpg");
-<<<<<<< HEAD
-  --gradiente-fundo: linear-gradient(180deg, rgba(250, 248, 234, 1) 25%, rgba(250, 248, 234,0) 100%);
-=======
+
   --gradiente-fundo: linear-gradient(180deg, white 25%, rgba(250, 248, 234,0) 100%);
->>>>>>> f5a7e8dda496030487b13282a8b76908184af082
+
 }
 
 html {
@@ -220,7 +216,6 @@ html {
   color: var(--cor-simbolo);
 }
 
-<<<<<<< HEAD
 .sobreOMej_perguntas_container .sobreOMej_perguntas-resposta a:hover {
   border-bottom: 1px dotted var(--cor-simbolo);
 }
@@ -289,8 +284,6 @@ html {
   font-size: 1.06rem;
 }
 
-=======
->>>>>>> f5a7e8dda496030487b13282a8b76908184af082
 * {
   padding: 0;
   margin: 0;
@@ -320,8 +313,3 @@ html {
   right: 2rem;
   background-color: var(--cor-simbolo);
 }
-<<<<<<< HEAD
-/*# sourceMappingURL=main.css.map */
-=======
-/*# sourceMappingURL=main.css.map */
->>>>>>> f5a7e8dda496030487b13282a8b76908184af082
