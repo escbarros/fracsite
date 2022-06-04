@@ -310,7 +310,7 @@ footer .nossas-redes_container {
 }
 
 footer .nossas-redes_container a i {
-  color: white;
+  color: var(--cor-secundaria);
   font-size: 2rem;
   margin: 1.5rem;
 }
