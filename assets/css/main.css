@@ -18,7 +18,9 @@ html[data-theme="light"] {
 html {
   scroll-behavior: smooth;
 }
-
+body{
+  background-color: var(--cor-primaria);
+}
 .landing {
   height: 87vh;
   width: 100%;
