@@ -1,6 +1,6 @@
 html[data-theme="dark"] {
   --cor-primaria: rgba(0, 0, 0, 1);
-  --cor-secundaria: rgba(250, 248, 234, 1);
+  --cor-secundaria: white;
   --cor-desc-secundaria:rgba(255, 255, 255, 0.425);
   --cor-simbolo: #00B5BB;
   --imagem-fundo: url("../img/darktopo.jpg");
@@ -8,7 +8,7 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="light"] {
-  --cor-primaria: rgba(250, 248, 234, 1);
+  --cor-primaria: white;
   --cor-secundaria: rgba(0, 0, 0, 1);
   --cor-simbolo: #009BA1;
   --imagem-fundo: url("../img/lighttopo.jpg");
@@ -18,11 +18,9 @@ html[data-theme="light"] {
 html {
   scroll-behavior: smooth;
 }
-body{
-  background-color: var(--cor-primaria);
-}
+
 .landing {
-  height: 87vh;
+  height: 100vh;
   width: 100%;
   background-color: var(--cor-primaria);
   background-image: var(--imagem-fundo);
@@ -92,12 +90,13 @@ body{
   color: var(--cor-secundaria);
   font-size: 2.15rem;
   font-weight: 700;
+  z-index: 2;
 }
 
 .landing_conteudo-descricao {
   color: var(--cor-desc-secundaria);
   font-size: 1.06rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .landing_conteudo_link-membro {
@@ -108,7 +107,7 @@ body{
   position: relative;
   color: var(--cor-simbolo);
   font-size: 1.06rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .landing_conteudo_link-membro a::after {
@@ -116,6 +115,7 @@ body{
 }
 
 .landing_conteudo_pointer {
+  cursor: pointer;
   height: auto;
   position: relative;
   color: var(--cor-desc-secundaria);
@@ -123,7 +123,7 @@ body{
 }
 
 .landing_conteudo_pointer-dica {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .landing_conteudo_pointer .landing_pointer-flecha {
@@ -162,6 +162,7 @@ body{
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 2rem 2rem;
+  margin-bottom: 2rem;
 }
 
 .sobreOMej_chamada {
@@ -180,7 +181,7 @@ body{
 .sobreOMej_chamada-descricao {
   width: 90%;
   color: var(--cor-desc-secundaria);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.06rem;
 }
 
@@ -206,7 +207,7 @@ body{
 
 .sobreOMej_perguntas_container .sobreOMej_perguntas-resposta {
   color: var(--cor-desc-secundaria);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.06rem;
 }
 
@@ -221,7 +222,6 @@ body{
 .sobreOsCursos {
   height: auto;
   width: 100%;
-  background-color: var(--cor-primaria);
   padding: 2rem 2rem;
 }
 
@@ -278,7 +278,7 @@ body{
 
 .sobreOsCursos_container .sobreOsCursos_curso_descricao-container .sobreOsCursos_curso-descricao {
   color: var(--cor-desc-secundaria);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.06rem;
 }
 
@@ -287,7 +287,7 @@ footer {
   width: 100%;
   background-color: var(--cor-primaria);
   padding: 0rem 2rem;
-  padding-top: 20%;
+  padding-top: 2rem;
 }
 
 footer .nossas-redes-titulo {
@@ -323,8 +323,127 @@ footer .mapa {
 footer .copyright {
   margin-top: 0.5rem;
   color: var(--cor-desc-secundaria);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.75rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .sobreOMej {
+    background-color: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sobreOMej .sobreOMej_chamada {
+    background-color: var(--cor-primaria);
+    width: 50%;
+    padding: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 2rem 1rem;
+    padding: 3rem;
+  }
+  .sobreOMej_perguntas {
+    padding: 5rem;
+    gap: 2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .sobreOMej_perguntas_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sobreOMej_perguntas_container .sobreOMej_perguntas-titulo, .sobreOMej_perguntas_container .sobreOMej_perguntas-resposta {
+    width: 75%;
+  }
+  .sobreOsCursos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .sobreOsCursos_titulo-container {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: auto;
+    border-right: 3px solid var(--cor-secundaria);
+    padding: 2rem;
+  }
+  .sobreOsCursos_container {
+    margin: 2rem;
+    text-align: center;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch;
+  }
+  .sobreOsCursos_container .sobreOsCursos_curso-nome i {
+    display: none;
+  }
+  .sobreOsCursos_container .sobreOsCursos_curso_descricao-container {
+    border: none;
+    height: auto;
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
+    padding: 1rem;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  footer .nossas-redes-titulo {
+    width: 100%;
+    text-align: center;
+    color: var(--cor-secundaria);
+  }
+  footer .nossas-redes_container a i {
+    margin: 0.5rem 0.5rem 1rem;
+  }
+  footer .mapa {
+    margin: auto;
+    width: 33%;
+    height: 25rem;
+  }
 }
 
 * {
@@ -336,6 +455,10 @@ footer .copyright {
   text-decoration: none;
 }
 
+body {
+  background-color: var(--cor-primaria);
+}
+
 #botao-topo {
   display: none;
   -webkit-box-pack: center;
@@ -344,12 +467,12 @@ footer .copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2rem;
+  font-size: 1.25rem;
   color: var(--cor-primaria);
   -webkit-box-shadow: var(--cor-secundaria) 0px 2px 4px 0px, var(--cor-secundaria) 0px 2px 16px 0px;
           box-shadow: var(--cor-secundaria) 0px 2px 4px 0px, var(--cor-secundaria) 0px 2px 16px 0px;
-  height: 4rem;
-  width: 4rem;
+  height: 2.5rem;
+  width: 2.5rem;
   border-radius: 100%;
   position: fixed;
   bottom: 2rem;
