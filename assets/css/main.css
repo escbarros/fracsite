@@ -108,10 +108,45 @@ html {
   color: var(--cor-simbolo);
   font-size: 1.06rem;
   font-weight: 300;
+  cursor: pointer;
+  border: none;
+  background: none;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+          transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transition-property: color;
+  transition-property: color;
 }
 
 .landing_conteudo_link-membro a::after {
-  content: " >";
+  content: " ";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--cor-simbolo);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+          transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transition-property: width, left;
+  transition-property: width, left;
+}
+
+.landing_conteudo_link-membro a:hover, .landing_conteudo_link-membro a:focus {
+  color: var(--cor-simbolo);
+}
+
+.landing_conteudo_link-membro a:hover:after, .landing_conteudo_link-membro a:hover:focus {
+  width: 100%;
+  left: 0%;
+}
+
+.landing_conteudo_link-membro a:active {
+  color: var(--cor-secundaria);
 }
 
 .landing_conteudo_pointer {
@@ -162,7 +197,6 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 2rem 2rem;
-  margin-bottom: 2rem;
 }
 
 .sobreOMej_chamada {
@@ -283,6 +317,16 @@ html {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: auto;
   width: 100%;
   background-color: var(--cor-primaria);
@@ -290,7 +334,93 @@ footer {
   padding-top: 2rem;
 }
 
+footer .footer_contato-titulo {
+  text-align: center;
+  color: var(--cor-secundaria);
+}
+
+footer .footer_contato_formulario {
+  width: 100%;
+  padding: 2rem;
+  color: var(--cor-desc-secundaria);
+  text-align: center;
+}
+
+footer .footer_contato_formulario_container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+footer .footer_contato_formulario_container-item {
+  padding: 1.25rem;
+  border: none;
+  width: 100%;
+  border-radius: 0.75rem;
+  color: var(--cor-secundaria);
+  background: transparent;
+  outline: 2px solid var(--cor-secundaria);
+}
+
+footer .footer_contato_formulario_container .label-formulario {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(1rem, 1rem);
+          transform: translate(1rem, 1rem);
+  -webkit-transition: -webkit-transform .25s;
+  transition: -webkit-transform .25s;
+  transition: transform .25s;
+  transition: transform .25s, -webkit-transform .25s;
+}
+
+footer .footer_contato_formulario_container .footer_contato_formulario_container-item:focus + .label-formulario, footer .footer_contato_formulario_container .footer_contato_formulario_container-item:valid + .label-formulario, footer .footer_contato_formulario_container .footer_contato_formulario_container-item:invalid:not(:placeholder-shown) + .label-formulario {
+  -webkit-transform: translate(10px, -14px) scale(0.8);
+          transform: translate(10px, -14px) scale(0.8);
+  color: var(--cor-secundaria);
+  padding-inline: 5px;
+  background-color: var(--cor-primaria);
+}
+
+footer .footer_contato_formulario_container .footer_contato_formulario_container-item:focus.label-formulario, footer .footer_contato_formulario_container .footer_contato_formulario_container-item:invalid:not(:placeholder-shown) {
+  outline-color: red;
+  color: red;
+}
+
+footer .footer_contato_formulario-botao {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: var(--cor-primaria);
+  background-color: var(--cor-secundaria);
+  border: none;
+  border-radius: 45px;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+footer .footer_contato_formulario-botao:hover {
+  background-color: var(--cor-simbolo);
+  -webkit-box-shadow: 0px 15px 20px rgba(46, 229, 229, 0.4);
+          box-shadow: 0px 15px 20px rgba(46, 229, 229, 0.4);
+  color: white;
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+footer .footer_contato_formulario-botao:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
 footer .nossas-redes-titulo {
+  text-align: center;
   color: var(--cor-secundaria);
   margin-bottom: 1rem;
 }
@@ -313,6 +443,10 @@ footer .nossas-redes_container a i {
   color: var(--cor-secundaria);
   font-size: 2rem;
   margin: 1.5rem;
+}
+
+footer .nossas-redes_container a i:hover {
+  color: var(--cor-simbolo);
 }
 
 footer .mapa {
@@ -345,12 +479,10 @@ footer .copyright {
   .sobreOMej .sobreOMej_chamada {
     background-color: var(--cor-primaria);
     width: 50%;
-    padding: 0;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    margin: 2rem 1rem;
-    padding: 3rem;
+    margin: 5rem 1rem;
   }
   .sobreOMej_perguntas {
     padding: 5rem;
@@ -393,9 +525,10 @@ footer .copyright {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    width: auto;
+    text-align: center;
+    width: 25%;
     border-right: 3px solid var(--cor-secundaria);
-    padding: 2rem;
+    margin: 2rem;
   }
   .sobreOsCursos_container {
     margin: 2rem;
@@ -419,6 +552,12 @@ footer .copyright {
     padding: 1rem;
   }
   footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  footer .nossas-redes {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -440,9 +579,16 @@ footer .copyright {
     margin: 0.5rem 0.5rem 1rem;
   }
   footer .mapa {
-    margin: auto;
-    width: 33%;
-    height: 25rem;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 50%;
+    width: 75%;
+  }
+  #botao-topo {
+    display: none;
+    visibility: hidden;
   }
 }
 
