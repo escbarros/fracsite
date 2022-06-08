@@ -73,3 +73,4 @@ const proxFrase = ()=>{
     contador = (contador + 1) % frases.length
 }
 proxFrase()
+console.log("./../");

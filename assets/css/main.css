@@ -10,6 +10,7 @@ html[data-theme="dark"] {
 html[data-theme="light"] {
   --cor-primaria: white;
   --cor-secundaria: rgba(0, 0, 0, 1);
+  --cor-desc-secundaria: rgb(86, 81, 81);
   --cor-simbolo: #009BA1;
   --imagem-fundo: url("../img/lighttopo.jpg");
   --gradiente-fundo: linear-gradient(180deg, rgba(250, 248, 234, 1) 25%, rgba(250, 248, 234,0) 100%);
@@ -253,6 +254,128 @@ html {
   border-bottom: 1px dotted var(--cor-simbolo);
 }
 
+.sobreFractal {
+  width: 100%;
+  height: auto;
+  background-color: var(--cor-primaria);
+  padding: 2rem 2rem;
+  color: var(--cor-secundaria);
+}
+
+.sobreFractal-titulo_container {
+  padding: 0 1rem;
+  border-right: 3px solid var(--cor-secundaria);
+}
+
+.sobreFractal-titulo_container .sobreFractal-titulo {
+  width: 75%;
+  color: var(--cor-secundaria);
+  font-weight: 700;
+  font-size: 2.15rem;
+  margin-bottom: 1rem;
+}
+
+.sobreFractal_container {
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+.sobreFractal_container .sobreFractal-texto {
+  color: var(--cor-desc-secundaria);
+  font-weight: 300;
+  font-size: 1.06rem;
+}
+
+.sobreFractal .sobreFractal-cursos_container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 3rem 0 2rem;
+  gap: 1.25rem;
+}
+
+.sobreFractal .sobreFractal-cursos_container .sobreFractal_curso {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.sobreFractal .sobreFractal-cursos_container .sobreFractal_curso i {
+  color: var(--cor-simbolo);
+  font-size: 1.2rem;
+  margin-bottom: 0.66rem;
+}
+
+.sobreFractal .sobreFractal-cursos_container .sobreFractal_curso-nome {
+  margin-bottom: 1rem;
+  color: var(--cor-secundaria);
+  font-weight: 300;
+  font-size: 1.06rem;
+}
+
+.sobreFractal .sobreFractal_mvv_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 3rem 0 2rem;
+}
+
+.sobreFractal .sobreFractal_mvv_container .sobreFractal_mvv {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.sobreFractal .sobreFractal_mvv_container .sobreFractal_mvv i {
+  color: var(--cor-simbolo);
+  font-size: 1.2rem;
+}
+
+.sobreFractal .sobreFractal_mvv_container .sobreFractal_mvv-nome {
+  margin: 1rem 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 3px solid var(--cor-secundaria);
+  line-height: 0.4rem;
+}
+
+.sobreFractal .sobreFractal_mvv_container .sobreFractal_mvv-nome span {
+  background-color: var(--cor-primaria);
+  padding: 0 1rem;
+  font-size: 1.3rem;
+}
+
+.sobreFractal .sobreFractal_mvv_container .sobreFractal_mvv-nome span i {
+  font-size: 1.21rem;
+}
+
+.sobreFractal .sobreFractal_mvv_container .sobreFractal_mvv-descricao {
+  color: var(--cor-desc-secundaria);
+  font-weight: 300;
+  font-size: 1.06rem;
+  margin-bottom: 1rem;
+}
+
 .sobreOsCursos {
   height: auto;
   width: 100%;
@@ -482,10 +605,11 @@ footer .copyright {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    margin: 5rem 1rem;
+    margin: 2rem 1rem;
   }
   .sobreOMej_perguntas {
     padding: 5rem;
+    padding-top: 1;
     gap: 2rem;
     display: -ms-grid;
     display: grid;
@@ -508,7 +632,39 @@ footer .copyright {
   .sobreOMej_perguntas_container .sobreOMej_perguntas-titulo, .sobreOMej_perguntas_container .sobreOMej_perguntas-resposta {
     width: 75%;
   }
-  .sobreOsCursos {
+  .sobreFractal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sobreFractal-titulo_container {
+    padding: 1rem 1rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sobreFractal-titulo_container .sobreFractal-titulo {
+    width: 100%;
+  }
+  .sobreFractal_container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -516,40 +672,46 @@ footer .copyright {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
   }
-  .sobreOsCursos_titulo-container {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+  .sobreFractal_container .sobreFractal-texto {
+    width: 75%;
     text-align: center;
-    width: 25%;
-    border-right: 3px solid var(--cor-secundaria);
-    margin: 2rem;
   }
-  .sobreOsCursos_container {
-    margin: 2rem;
-    text-align: center;
-    width: 100%;
+  .sobreFractal .sobreFractal-cursos_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-line-pack: stretch;
-        align-content: stretch;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-  .sobreOsCursos_container .sobreOsCursos_curso-nome i {
-    display: none;
+  .sobreFractal .sobreFractal_mvv_container {
+    margin: 3rem 0 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    gap: 2rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-  .sobreOsCursos_container .sobreOsCursos_curso_descricao-container {
-    border: none;
-    height: auto;
-    margin-top: 0.25rem;
-    margin-left: 0.25rem;
-    padding: 1rem;
+  .sobreFractal .sobreFractal_mvv_container .sobreFractal_mvv {
+    width: 25%;
+    padding: 0;
+    margin: 0;
   }
   footer {
     display: -ms-grid;

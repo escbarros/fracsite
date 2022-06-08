@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/fd1dcea2fc.js" crossorigin="anonymous"></script>
+        
         <link rel="stylesheet" href="./assets/css/main.css">
     </head>
     <body>
@@ -38,7 +39,7 @@
                     <h3 class="landing_conteudo-descricao">Nós somos a empresa júnior de tecologia da PUCPR.</h3>
                     <h3 class="landing_conteudo-descricao">Oferecemos soluções em tecnologia sob medida e a preços acessiveis.</h3>
                         <!-- <h2 class="landing_conteudo_links-contato"><a href="#">Entre em contato</a></h2> -->
-                    <h2 class="landing_conteudo_link-membro">
+                    <h2 id="link-ps" class="landing_conteudo_link-membro" title="redirecionar para a página de processo seletivo">
                         <a href="#">Venha se juntar a nós</a>
                     </h2>
 
@@ -73,43 +74,50 @@
                     </div>
                 </div>
             </section>
-            <section class="sobreOsCursos">
-                <div class="sobreOsCursos_titulo-container">
+            <section class="sobreFractal">
+                <div class="sobreFractal-titulo_container">
+                    <h2 class="sobreFractal-titulo">Sobre a Fractal</h2>
+                </div>
+                <div class="sobreFractal_container">
+                    <p class="sobreFractal-texto">A história da Fractal começou no inicio de 2021 quando percebemos que não havia nenhuma empresa júnior na pucpr voltada para a área de computação. Por isso, decidimos formar um conjunto de cursos que atuam em sintonia em situações profissionais na vida real</p>
+                    <div class="sobreFractal-cursos_container">
+                        <div class="sobreFractal_curso">
+                            <i class="fa fa-desktop"></i>
+                            <h3 class="sobreFractal_curso-nome">Engenhaira de computação</h3>
+                        </div><div class="sobreFractal_curso">
+                            <i class="fa-solid fa-robot "></i>
+                            <h3 class="sobreFractal_curso-nome">Engenhaira Mecatronica</h3>
+                        </div>
+                        <div class="sobreFractal_curso">
+                            <i class="fa-brands fa-connectdevelop"></i>
+                            <h3 class="sobreFractal_curso-nome">Engenhaira de Software</h3>
+                        </div>
+                        <div class="sobreFractal_curso">
+                            <i class="fa-solid fa-code "></i>
+                            <h3 class="sobreFractal_curso-nome">Ciencia da Computação</h3>
+                        </div>
+                        <div class="sobreFractal_curso">
+                            <i class="fa-solid fa-fingerprint"></i>
+                            <h3 class="sobreFractal_curso-nome">Cyber Segurança</h3>
+                        </div>
+                    </div>
+                    <p class="sobreFractal-texto">Após varias conversas com o núcleo curitiba, outras ejs e o colegiado da PUCPR, conseguimos a aprovação para iniciar nossos serviços esse ano</p>
+                    <div class="sobreFractal_mvv_container">
+                        <div class="sobreFractal_mvv">
+                            <h3 class="sobreFractal_mvv-nome"><span><i class="fa-solid fa-bullseye"></i> Missão</span></h3>
+                            <p class="sobreFractal_mvv-descricao">Prestar serviços de hardware e software de qualidade a empresas, motivando o espírito empreendedor e promovendo o conhecimento.</p>
+                        </div>
+                        <div class="sobreFractal_mvv">
+                            <h3 class="sobreFractal_mvv-nome"><span><i class="fa-solid fa-eye"></i> Visão</span></h3>
+                            <p class="sobreFractal_mvv-descricao">Estar entre as maiores empresas juniores do país.</p>
+                        </div>
+                        <div class="sobreFractal_mvv">
+                            <h3 class="sobreFractal_mvv-nome"><span><i class="fa-solid fa-heart"></i> Valores</span></h3>
+                            <p class="sobreFractal_mvv-descricao">Agir de forma ordenada e calma, gerando um ambiente saudável para trabalhar, evoluir e aprender. </p>
+                        </div>
+                    </div>
+                    <p class="sobreFractal-texto">Assim como nos fractais encontrados na natureza, procuramos ser altamente efetivos e resilientes nos nossos projetos, entregando sempre um serviço de alta qualidade.</p>
 
-                    <h2 class="sobreOsCursos-titulo">Nossos cursos</h2>
-                </div>
-                <div class="sobreOsCursos_container">
-                    <div class="sobreOsCursos_curso">
-                        <h3 class="sobreOsCursos_curso-nome">Engenharia de computação <i class="fa-solid fa-circle-info" data-curso="eng-comp" onclick="abreDescricao(this)"></i></h3>
-                        <div id="eng-comp" class="sobreOsCursos_curso_descricao-container" data-open=false>
-                            <p class="sobreOsCursos_curso-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugit eveniet facilis, esse modi expedita doloremque nostrum fuga, consequatur dolor eum quaerat odit sapiente laboriosam, minus doloribus blanditiis dolorum et.</p>
-                        </div>
-                    </div>
-                    <div class="sobreOsCursos_curso">
-                        <h3 class="sobreOsCursos_curso-nome">Engenharia Mecatronica <i class="fa-solid fa-circle-info" data-curso="eng-mec"onclick="abreDescricao(this)" ></i></h3>
-                        <div id="eng-mec" class="sobreOsCursos_curso_descricao-container" data-open="false">
-                            <p class="sobreOsCursos_curso-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugit eveniet facilis, esse modi expedita doloremque nostrum fuga, consequatur dolor eum quaerat odit sapiente laboriosam, minus doloribus blanditiis dolorum et.</p>
-                        </div>
-                    </div>
-                    <div class="sobreOsCursos_curso">
-                        <h3 class="sobreOsCursos_curso-nome">Engenharia de Software <i class="fa-solid fa-circle-info" data-curso="eng-sof"onclick="abreDescricao(this)" ></i></h3>
-                        <div id="eng-sof" class="sobreOsCursos_curso_descricao-container data-open="false">
-                            <p class="sobreOsCursos_curso-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugit eveniet facilis, esse modi expedita doloremque nostrum fuga, consequatur dolor eum quaerat odit sapiente laboriosam, minus doloribus blanditiis dolorum et.</p>
-                        </div>
-                    </div>
-                    <div class="sobreOsCursos_curso">
-                        <h3 class="sobreOsCursos_curso-nome">Ciencia da Computação <i class="fa-solid fa-circle-info" data-curso="cie-comp"onclick="abreDescricao(this)" ></i></h3>
-                        <div id="cie-comp" class="sobreOsCursos_curso_descricao-container data-open="false">
-                            <p class="sobreOsCursos_curso-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugit eveniet facilis, esse modi expedita doloremque nostrum fuga, consequatur dolor eum quaerat odit sapiente laboriosam, minus doloribus blanditiis dolorum et.</p>
-                        </div>
-                    </div>
-                    <div class="sobreOsCursos_curso">
-                        <h3 class="sobreOsCursos_curso-nome">Cybersegurança <i class="fa-solid fa-circle-info" data-curso="cyb-seg"onclick="abreDescricao(this)" ></i></h3>
-                        <div id="cyb-seg" class="sobreOsCursos_curso_descricao-container data-open="false">
-                            <p class="sobreOsCursos_curso-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugit eveniet facilis, esse modi expedita doloremque nostrum fuga, consequatur dolor eum quaerat odit sapiente laboriosam, minus doloribus blanditiis dolorum et.</p>
-                        </div>
-                    </div>
-                </div>
                 </div>
             </section>
         </main>
@@ -152,7 +160,7 @@
             </section>
             <p class="copyright">Copyright &copy Fractal. Todos os direitos reservados</p>
         </footer>
-
+        <!-- <script src="./assets/js/router.js"></script> -->
         <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
         </script>
@@ -175,9 +183,6 @@
                     
                 });
             }
-        </script>
-        <script>
-
         </script>
         <script src="./assets/js/TextScramble.js"></script>
         <script>
