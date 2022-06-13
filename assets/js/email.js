@@ -9,7 +9,7 @@
             assunto: document.getElementById("assunto-contato").value,
             mensagem: document.getElementById("contato-mensagem").value,
         };
-        emailjs.send('service_tcsdy1j', 'template_hy3vkh6', templateParams) //use your Service ID and Template ID
+        emailjs.send('service_5qeff5n', 'template_hy3vkh6', templateParams) //use your Service ID and Template ID
         .then(function(response) {
             alert("Email enviado com sucesso!")
             window.location.reload();
