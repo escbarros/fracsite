@@ -110,7 +110,6 @@ html {
   font-size: 1.06rem;
   font-weight: 300;
   cursor: pointer;
-  border-bottom: 1px dotted var(--cor-simbolo);
   background: none;
   -webkit-transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
           transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -474,7 +473,6 @@ html {
 }
 
 .processoSeletivo_links a {
-  border-bottom: 1px dotted var(--cor-simbolo);
   color: var(--cor-simbolo);
   font-size: 1.06rem;
   font-weight: 300;
@@ -572,6 +570,7 @@ footer .footer_contato_formulario_container-item {
   color: var(--cor-secundaria);
   background: transparent;
   outline: 2px solid var(--cor-secundaria);
+  resize: none;
 }
 
 footer .footer_contato_formulario_container .label-formulario {
@@ -674,9 +673,6 @@ footer .copyright {
 }
 
 @media screen and (min-width: 1000px) {
-  .landing_conteudo_link-membro a {
-    border: none;
-  }
   .sobreOMej {
     background-color: none;
     display: -webkit-box;

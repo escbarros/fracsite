@@ -1,5 +1,5 @@
 (function(){
-    emailjs.init("DamTBSCYKW4vlc8Yo"); //use your USER ID
+    emailjs.init("_QwSRG-H6wvi3fA9J"); //use your USER ID
     })();
     function enviaEmail(e){
         event.preventDefault();
@@ -9,7 +9,7 @@
             assunto: document.getElementById("assunto-contato").value,
             mensagem: document.getElementById("contato-mensagem").value,
         };
-        emailjs.send('service_5qeff5n', 'template_hy3vkh6', templateParams) //use your Service ID and Template ID
+        emailjs.send('service_qmuxje5', 'template_mf2fouj', templateParams) //use your Service ID and Template ID
         .then(function(response) {
             alert("Email enviado com sucesso!")
             window.location.reload();
